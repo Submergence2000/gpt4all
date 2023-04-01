@@ -55,11 +55,10 @@ def tokenize_inputs(config, tokenizer, examples):
 
 def load_data(config, tokenizer):
     dataset_path = config["dataset_path"]
-
     if os.path.exists(dataset_path):
         # check if path is a directory
         if os.path.isdir(dataset_path):
-            files = glob.glob(os.path.join(dataset_path, "*_clean.jsonl"))
+            files = glob.glob(os.path.join(dataset_path, "*train.jsonl"))
         else:
             files = [dataset_path]
 
