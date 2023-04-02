@@ -4,6 +4,7 @@ ckpts**
 wandb
 peft/
 transformers/
+chat/gpt4all-lora-quantized.bin
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
