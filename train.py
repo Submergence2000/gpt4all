@@ -60,7 +60,9 @@ def train(accelerator, config):
     checkpoint = config["gradient_checkpointing"]
     model = AutoModelForCausalLM.from_pretrained(config["model_name"], 
                                                     use_cache=False if checkpoint else True,
-                                                    trust_remote_code=True) 
+                                                    load_in_8bit=True, 
+                                                    trust_remote_code=True,
+                                                    device_map='auto') 
 
     if added_tokens > 0:
         model.resize_token_embeddings(len(tokenizer))
