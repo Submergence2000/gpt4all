@@ -2,6 +2,8 @@
 *tar.gz
 ckpts**
 wandb
+peft/
+transformers/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
